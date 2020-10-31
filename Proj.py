@@ -15,6 +15,13 @@ print("\n\tYou've only ", round(math.log(upper - lower + 1, 2))," chances to gue
 #initializing the number of guesses. 
 count = 0 
 
+g = x % 2
+
+if g == 0:
+    print("Have a clue")
+    print("x is divisible by 2")
+
+
 #for calculation of minimum number of 
 #guesses depends upon range
 while count < math.log(upper - lower + 1, 2): 
@@ -31,6 +38,7 @@ while count < math.log(upper - lower + 1, 2):
         print("You guessed to small")
     elif x < guess: 
         print("You guessed to high")
+
 
 #If guessing is more than required guesses, 
 #show this output. 
